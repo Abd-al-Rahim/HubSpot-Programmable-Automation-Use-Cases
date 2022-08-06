@@ -1246,10 +1246,8 @@ def main(event):
         }
         objectMobile = SimplePublicObjectInput(properties=properties)
 
-        updateMobile = hubspot.crm.contacts.basic_api.update(
+        hubspot.crm.contacts.basic_api.update(
             id, simple_public_object_input=objectMobile)
-
-        print(updateMobile)
 
     if phone.startswith('0') and country:
         intlPhone = formatToIntl(phone, country)
